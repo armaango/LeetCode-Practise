@@ -16,7 +16,7 @@ class Solution(object):
             return 0
 
         for i in range(len(inp)):
-            if inp[i] in ["0","1","2","3","4","5","6","7","8","9"]:
+            if inp[i].isdigit():
                 continue
             else:
                 inp = inp[:i]
