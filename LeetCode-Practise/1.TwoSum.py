@@ -16,3 +16,20 @@ class Solution(object):
                     lst.append(i)
                     lst.append(j)
         return lst
+# above solution has much slower runtime
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        lst = {}
+        for i,num in enumerate(nums):
+            if target-num in lst:
+                return [lst[target-num],i]
+            lst[num]=i
+        return []
+
+#this solution has extremely faster runtime
